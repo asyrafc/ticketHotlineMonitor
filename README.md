@@ -1,2 +1,2 @@
 # ticketHotlineMonitor
-Monitor ticket availability
+Monitor ticket availability at https://ticket.tickethotline.com.my/
