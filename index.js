@@ -16,6 +16,9 @@ async function monitor() {
 				if(str.includes('Our online tickets have reached its limit')) {
 					console.log('Ticket belum ada lagi.');
 				}
+				if(str.includes('SOLD OUT')) {
+					console.log('Ticket dah habis.');
+				}
 				if(data.includes('The service is unavailable.')) {
 					console.log('Tidak pasti, mungkin laman sesawang x hidup.');
 				}
