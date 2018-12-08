@@ -20,7 +20,13 @@ async function monitor() {
 					console.log('Ticket dah habis.');
 				}
 				if(data.includes('The service is unavailable.')) {
-					console.log('Tidak pasti, mungkin laman sesawang x hidup.');
+					console.log('High amount of traffic.');
+				}
+				if(!data) {
+					console.log('Probably website down.');
+				}
+				else {
+					console.log(`Mesej: ${str}`);
 				}
 			})
 			.catch(err => err);
