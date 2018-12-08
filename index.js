@@ -8,7 +8,7 @@ async function monitor() {
 		await rp('https://ticket.tickethotline.com.my/')
 			.then(async (data) => {
 				const str = cheerio('[id=bodyHolder_ctl00_pnlBuy]', data).text();
-				if(!str.includes('Our online tickets have reached its limit')) {
+				if(!str.includes('Our online tickets have reached its limit') && !str.includes('SOLD OUT')) {
 					console.log('Tiket dah ada la kot.');
 					ticketAvailable = true;
 					//console.log(`https://ticket.tickethotline.com.my/${cheerio('[id=bodyHolder_ctl00_pnlBuy] > a', data).attr.href}`);
